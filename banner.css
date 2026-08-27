@@ -1,0 +1,22 @@
+/* Telefonda chiroyli ko'rinishi uchun moslama (Responsive) */
+@media (max-width: 768px) {
+    .nike-banner {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    .nike-content {
+        max-width: 100%;
+    }
+    .nike-image {
+        margin-top: 20px;
+    }
+    .nike-image img {
+        max-width: 200px;
+        transform: rotate(0deg);
+    }
+    .nike-title {
+        font-size: 24px;
+    }
+}
