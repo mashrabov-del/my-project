@@ -4,59 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="/banner.css">
-    <title>Nike Banner Misoli</title>
+    <title>Nike Banner</title>
     <style>
-body{
-      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-      transform: matrix3d(5s);
- }
+        body {
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
         /* Nike banner konteyneri */
         .nike-banner {
             width: 100%;
             max-width: 800px;
-            height: 400px;
             background: linear-gradient(135deg, #111111 0%, #2b2b2b 100%);
             color: #ffffff;
             display: flex;
+            flex-wrap: wrap; /* Telefonda sig'masa pastga tushishi uchun */
             align-items: center;
             justify-content: space-between;
-            padding: 40px;
+            padding: 30px;
             box-sizing: border-box;
             font-family: 'Impact', Arial, sans-serif;
             border-radius: 12px;
-            overflow: hidden;
-            margin: 20px auto;
-            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         /* Matn qismi */
         .nike-content {
-            max-width: 55%;
+            flex: 1;
+            min-width: 250px;
             z-index: 2;
+            margin-right: 15px;
         }
 
         .nike-logo {
-            font-size: 20px;
+            font-size: 18px;
             font-style: italic;
             letter-spacing: 3px;
             color: #fa541c;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .nike-title {
-            font-size: 42px;
+            font-size: 28px;
             text-transform: uppercase;
-            margin: 0 0 15px 0;
+            margin: 0 0 12px 0;
             line-height: 1.1;
             letter-spacing: 1px;
             font-style: italic;
         }
 
         .nike-text {
-            font-size: 16px;
+            font-size: 14px;
             font-family: Arial, sans-serif;
             color: #d9d9d9;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         /* Tugma dizayni */
@@ -64,12 +71,12 @@ body{
             display: inline-block;
             background-color: #fa541c;
             color: #ffffff;
-            padding: 12px 28px;
+            padding: 12px 24px;
             border-radius: 4px;
             text-decoration: none;
             font-family: Arial, sans-serif;
             font-weight: 700;
-            font-size: 14px;
+            font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: background 0.3s, transform 0.2s;
@@ -81,16 +88,44 @@ body{
         }
 
         /* Rasm qismi */
+        .nike-image {
+            flex: 1;
+            min-width: 220px;
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
         .nike-image img {
-            max-width: 280px;
+            width: 100%;
+            max-width: 260px;
             height: auto;
             display: block;
-            transform: rotate(-15deg); /* Dinamik effekt berish uchun */
+            transform: rotate(-10deg);
             transition: transform 0.3s;
         }
 
         .nike-banner:hover .nike-image img {
             transform: rotate(0deg) scale(1.05);
+        }
+
+        /* Aniq telefonga moslashuvchi qo'shimcha qoida */
+        @media (max-width: 600px) {
+            .nike-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+            .nike-content {
+                margin-right: 0;
+            }
+            .nike-title {
+                font-size: 22px;
+            }
+            .nike-image img {
+                transform: rotate(0deg);
+                max-width: 200px;
+            }
         }
     </style>
 </head>
@@ -101,10 +136,9 @@ body{
             <div class="nike-logo">NIKE AIR MAX</div>
             <h2 class="nike-title">O'zingni yurayotgandek emas uchoyotgandek xis qilishni istaysanmi?!✨</h2>
             <p class="nike-text">Yangi xisyotlarni kashf et ularni jilovlama hoziroq xarid qil!</p>
-            <a href="https://uzum.uz/uz/product/nike-air-max-2420669?skuId=8698634" class="nike-btn">Sotib olish</a>
+            <a href="https://uzum.uz/uz/product/nike-air-max-2420669?skuId=8698634" class="nike-btn" target="_blank">Sotib olish</a>
         </div>
         <div class="nike-image">
-            <!-- Bu yerga o'z mahsulotingiz rasmini qo'yasiz -->
             <img src="https://images.uzum.uz/d6itbmu9u1gahuorm2r0/t_product_540_high.jpg" alt="Nike Shoes">
         </div>
     </div>
