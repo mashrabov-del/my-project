@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Banner Misoli</title>
+    <style>
+body{
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      transform: matrix3d(5s);
+ }
+        /* Nike banner konteyneri */
+        .nike-banner {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            background: linear-gradient(135deg, #111111 0%, #2b2b2b 100%);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px;
+            box-sizing: border-box;
+            font-family: 'Impact', Arial, sans-serif;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        /* Matn qismi */
+        .nike-content {
+            max-width: 55%;
+            z-index: 2;
+        }
+
+        .nike-logo {
+            font-size: 20px;
+            font-style: italic;
+            letter-spacing: 3px;
+            color: #fa541c;
+            margin-bottom: 10px;
+        }
+
+        .nike-title {
+            font-size: 42px;
+            text-transform: uppercase;
+            margin: 0 0 15px 0;
+            line-height: 1.1;
+            letter-spacing: 1px;
+            font-style: italic;
+        }
+
+        .nike-text {
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            color: #d9d9d9;
+            margin-bottom: 25px;
+        }
+
+        /* Tugma dizayni */
+        .nike-btn {
+            display: inline-block;
+            background-color: #fa541c;
+            color: #ffffff;
+            padding: 12px 28px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .nike-btn:hover {
+            background-color: #e04815;
+            transform: scale(1.05);
+        }
+
+        /* Rasm qismi */
+        .nike-image img {
+            max-width: 280px;
+            height: auto;
+            display: block;
+            transform: rotate(-15deg); /* Dinamik effekt berish uchun */
+            transition: transform 0.3s;
+        }
+
+        .nike-banner:hover .nike-image img {
+            transform: rotate(0deg) scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nike-banner">
+        <div class="nike-content">
+            <div class="nike-logo">NIKE AIR MAX</div>
+            <h2 class="nike-title">O'zingni yurayotgandek emas uchoyotgandek xis qilishni istaysanmi?!✨</h2>
+            <p class="nike-text">Yangi xisyotlarni kashf et ularni jilovlama hoziroq xarid qil!</p>
+            <a href="https://uzum.uz/uz/product/nike-air-max-2420669?skuId=8698634" class="nike-btn">Sotib olish</a>
+        </div>
+        <div class="nike-image">
+            <!-- Bu yerga o'z mahsulotingiz rasmini qo'yasiz -->
+            <img src="https://images.uzum.uz/d6itbmu9u1gahuorm2r0/t_product_540_high.jpg" alt="Nike Shoes">
+        </div>
+    </div>
+
+</body>
+</html>
